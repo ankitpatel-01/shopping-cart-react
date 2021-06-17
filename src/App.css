@@ -1,38 +1,233 @@
-.App {
+body {
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  margin-left: 100px;
+  margin-right: 100px;
+  transition: all 0.3s ease 0s;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.home {
+  text-decoration: none;
+  margin-right: auto;
+  font-weight: bolder;
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.655);
+  cursor: pointer;
+}
+
+.home:hover {
+  color: #000;
+}
+
+.navLinks {
+  list-style: none;
+}
+
+.navLinks li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: large;
+  color: black;
+}
+.dot {
+  width: fit-content;
+  height: fit-content;
+  padding: 6px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.cate-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cate-items {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  margin: 20px;
+  padding: 32px;
+  border-radius: 12px;
+  height: fit-content;
+  width: 380px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cate-items:hover {
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.521);
+}
+
+.Product-grid {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.Product-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 15px;
+  text-align: left;
+  font-family: arial;
+  padding: 10px;
+  border-radius: 18px;
+  width: 300px;
+  height: fit-content;
+}
+
+.Product-price {
+  font-size: 22px;
+}
+
+.Product-card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.Product-card img {
+  width: 100%;
+  height: 280px;
+  border-radius: 12px;
+  object-fit: scale-down;
+}
+
+.Product-card button:hover {
+  opacity: 0.7;
+}
+
+button:disabled {
+  background-color: darkgrey;
+}
+button:disabled:hover {
+  background-color: darkgray;
+}
+
+.text-success {
+  color: green;
+}
+
+.text-danger {
+  color: red;
+}
+
+.category-main {
+  display: flex;
+  justify-content: flex-start;
+}
+.filter-box {
+  display: inline;
+  width: 25%;
+}
+
+.checkout {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  border-radius: 12px;
+  text-align: center;
+  align-items: center;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
+
+.thead tr th {
+  width: 25%;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+  color: rgba(0, 0, 0, 0.715);
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.tdata td {
+  padding: 10px;
+  margin: 5px;
+  color: #000;
+  font-size: 1.4rem;
+}
+/* .tdata td img {
+  
+} */
+.quantity {
+  width: 15%;
+  height: max-content;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.cartbtn {
+  background-color: gray;
   color: white;
+  border: none;
+  margin-left: 3px;
+  margin-right: 3px;
+  font-size: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+.group {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.totalPrice {
+  float: right;
+  font-size: x-large;
+  margin-top: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.emptyCart {
+  margin-top: 50px;
+  font-size: xx-large;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 80px;
+  font-weight: 800;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+.container h2 {
+  font-size: 25px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  margin-top: -40px;
+}
+.container p {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+.container {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 15%;
 }
